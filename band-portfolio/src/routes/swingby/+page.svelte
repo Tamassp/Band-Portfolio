@@ -59,7 +59,7 @@
 	</div>
 	<!-- <Menu bind:open /> -->
 
-	<div class="relative page-container 2xl:pl-2 2xl:pr-2">
+	<div class="relative page-container /*2xl:pl-2 /*2xl:pr-2">
 		{#if loading}
 			<div
 				out:slide={{ delay: 600, duration: 600, easing: quintOut, axis: 'y' }}
@@ -70,41 +70,45 @@
 		{/if}
 
 		<!-- Responsive images for different screen sizes -->
-		<picture transition:fade={{ delay: 250, duration: 300 }}>
+		<picture>
 			<source srcset={coverSmall} media="(max-width: {sm}px)" />
-			<img src={coverBig} alt="background" class="sticky top-16 left-0 /*max-h-[60vh] w-full" />
+			<img
+				src={coverBig}
+				alt="background"
+				class="sticky top-16 left-0 /*max-h-[60vh] w-full lg:w-[99%] lg:m-1"
+			/>
 		</picture>
 
 		<img
 			src={drums1}
 			alt="drums1"
-			class="sticky border-r-8 border-t-8 border-white /*md:w-1/2 top-16 left-6"
+			class="sticky border-r-8 border-t-8 border-l-[16px] border-white /*md:w-1/2 top-16 left-6"
 		/>
 		<img
 			src={piano1}
 			alt="piano1"
-			class="sticky ml-auto border-l-8 border-t-8 border-white /*md:w-1/2 md:-mt-48 top-16"
+			class="sticky ml-auto border-l-8 border-t-8 border-r-[16px] border-white /*md:w-1/2 md:-mt-48 top-[56px]"
 		/>
-		<Divider size={12} class="-m-1 bg-white" />
+		<Divider size={12} class="bg-white 0" />
 		<picture>
 			<source srcset={coverSmall2} media="(max-width: {sm}px)" />
 			<img
 				src={coverBig2}
 				alt="background"
-				class="sticky top-16 left-0 /*max-h-[60vh] w-full z-20"
+				class="sticky top-16 left-0 /*max-h-[60vh] w-full z-20 border-b-8 border-white"
 			/>
 		</picture>
 		<img
 			src={drums2}
 			alt="drums2"
-			class="sticky border-r-8 border-t-8 border-white /*md:w-1/2 top-16 left-6"
+			class="sticky border-r-8 border-t-8 border-l-[16px] border-white /*md:w-1/2 top-16 left-6"
 		/>
 		<img
 			src={piano2}
 			alt="piano2"
-			class="sticky ml-auto border-l-8 border-t-8 border-white /*md:w-1/2 md:-mt-48 top-16"
+			class="sticky ml-auto border-l-8 border-t-8 border-r-[16px] border-white /*md:w-1/2 md:-mt-48 top-16"
 		/>
-		<div class="flex flex-col items-center -m-1 bg-white md:mt-12 content">
+		<div class="flex flex-col items-center bg-white 0 md:mt-12 content">
 			<Divider size={32} />
 			<!-- <TitleDescription title="About" description=" 'There is one language that speaks to everyone: Music'" descriptionStyles=" text-center" /> -->
 			<!-- <TitleDescription description="As an international duo from Horsens with a passion for music, we enjoy performing in the cozy atmosphere of bars and cafes."/>

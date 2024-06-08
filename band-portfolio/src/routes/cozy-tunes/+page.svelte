@@ -98,7 +98,7 @@
 	</div>
 	<!-- <Menu bind:open /> -->
 
-	<div class="relative page-container 2xl:pl-2 2xl:pr-2">
+	<div class="relative page-container /*2xl:pl-2 /*2xl:pr-2">
 		{#if loading}
 			<div
 				out:slide={{ delay: 600, duration: 600, easing: quintOut, axis: 'y' }}
@@ -109,22 +109,22 @@
 		{/if}
 
 		<!-- Responsive images for different screen sizes -->
-		<picture transition:fade={{ delay: 250, duration: 300 }}>
+		<picture>
 			<source srcset={coverSmall} media="(max-width: {sm}px)" />
 			<img src={coverBig} alt="background" class="sticky top-16 left-0 /*max-h-[60vh] w-full" />
 		</picture>
 
-		<Divider size={12} class="-m-1 bg-white" />
+		<Divider size={12} class="bg-white " />
 		<picture>
 			<source srcset={coverSmall2} media="(max-width: {sm}px)" />
 			<img src={coverBig2} alt="background" class="sticky top-16 left-0 /*max-h-[60vh] w-full" />
 		</picture>
-		<Divider size={12} class="w-full -m-1 bg-white" />
+		<Divider size={12} class="w-full bg-white" />
 		<picture>
 			<source srcset={coverSmall3} media="(max-width: {sm}px)" />
 			<img src={coverBig3} alt="background" class="sticky top-16 left-0 /*max-h-[60vh] w-full" />
 		</picture>
-		<div class="flex flex-col items-center -m-1 bg-white md:mt-12 content">
+		<div class="flex flex-col items-center bg-white md:mt-12 content">
 			<Divider size={32} />
 			<!-- <TitleDescription title="About" description=" 'There is one language that speaks to everyone: Music'" descriptionStyles=" text-center" /> -->
 			<!-- <TitleDescription description="As an international duo from Horsens with a passion for music, we enjoy performing in the cozy atmosphere of bars and cafes."/>
@@ -211,7 +211,7 @@
 		object-fit: cover;
 		/* border-radius: 20px; */
 		z-index: -1;
-
+		/* margin: 1px; */
 		/* width: 100vw;
 		position: relative;
 		left: calc(-50vw + 50%); */

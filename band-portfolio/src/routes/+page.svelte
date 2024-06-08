@@ -196,19 +196,19 @@
 		}
 		.cardInner:hover .swingByImage1 {
 			transition: 0.3s ease-in-out;
-			height: 320px;
+			height: 260px;
 			width: 110px;
 		}
 
 		.cardInner:hover .swingByImage2 {
 			transition: 0.3s ease-in-out;
-			height: 288px;
+			height: 228px;
 			width: 110px;
 		}
 
 		.cardInner:hover .swingByImage3 {
 			transition: 0.3s ease-in-out;
-			height: 256px;
+			height: 196px;
 			width: 110px;
 		}
 	}
