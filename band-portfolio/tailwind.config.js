@@ -17,6 +17,8 @@ export default {
       'primary': 'rgba(23,97,120,0.95)',
       'secondary': 'rgba(103, 131, 140, 0.95)',
       'accent': 'rgba(185, 208, 214, 0.95)',
+      'cozyTunes': 'rgba(150, 100, 90, 0.15)',
+      'swingBy': 'rgba(233, 174, 134, 0.5)',
     }
   },
   plugins: [],
