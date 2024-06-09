@@ -88,13 +88,13 @@
 	<!-- <TitleDescriptionCard/> -->
 
 	<div
-		class="sticky top-0 left-0 z-10 flex flex-row items-center justify-between w-full pt-6 pb-6 pl-2 pr-2 bg-white navbar"
+		class="sticky top-0 left-0 z-10 flex flex-row items-center justify-between w-full pt-1 pb-1 pl-2 pr-2 bg-white sm:pt-4 sm:pb-4 md:pt-6 md:pb-6 navbar"
 	>
 		<Title class="logo">Piano & Vocal Duo</Title>
 		<Hamburger bind:open />
 	</div>
 	<div class="fixed right-0 z-10 w-full">
-		<Menu bind:open />
+		<Menu bind:open portfolioLink="https://youtube.com/@themessedupchords?si=1QhkzUE4BvcgLRrl" />
 	</div>
 	<!-- <Menu bind:open /> -->
 
@@ -124,7 +124,7 @@
 			<source srcset={coverSmall3} media="(max-width: {sm}px)" />
 			<img src={coverBig3} alt="background" class="sticky top-16 left-0 /*max-h-[60vh] w-full" />
 		</picture>
-		<div class="flex flex-col items-center bg-white md:mt-12 content">
+		<section id="aboutSection" class="flex flex-col items-center bg-white md:mt-12 content">
 			<Divider size={32} />
 			<!-- <TitleDescription title="About" description=" 'There is one language that speaks to everyone: Music'" descriptionStyles=" text-center" /> -->
 			<!-- <TitleDescription description="As an international duo from Horsens with a passion for music, we enjoy performing in the cozy atmosphere of bars and cafes."/>
@@ -145,10 +145,16 @@
 				mashups and more upbeat tunes.</Description
 			>
 			<Divider size={24} />
-			<a>Listen to our portfolio</a>
+			<a
+				href="https://youtube.com/@themessedupchords?si=1QhkzUE4BvcgLRrl"
+				target="_blank"
+				style="color: chocolate;">Listen to our portfolio</a
+			>
 			<Divider size={48} />
-			<TitleDescription title="Booking" description="hello@gmail.com"></TitleDescription>
-		</div>
+			<section id="contactSection" class="flex flex-col items-center">
+				<TitleDescription title="Booking" description="messedupchords@gmail.com"></TitleDescription>
+			</section>
+		</section>
 		<Divider />
 	</div>
 </div>
@@ -222,6 +228,10 @@
 		aspect-ratio: 16/9;
 		border-radius: 20px;
 		z-index: -1;
+	}
+
+	#aboutSection {
+		scroll-margin-top: 100px;
 	}
 	/* .coverImage {
         width: min-content;

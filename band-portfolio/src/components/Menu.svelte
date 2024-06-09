@@ -4,6 +4,20 @@
 	import Divider from './Divider.svelte'
 
 	export let open: boolean
+	export let portfolioLink: string
+
+	// SCROLL INTO VIEW
+	function scrollIntoView({ target }) {
+		//set open to false
+		open = false
+
+		//scroll into view
+		const el = document.querySelector(target.getAttribute('href'))
+		if (!el) return
+		el.scrollIntoView({
+			behavior: 'smooth'
+		})
+	}
 </script>
 
 {#if open}
@@ -14,9 +28,21 @@
                 {link}
             </p>
         {/each} -->
-		<p transition:fly={{ y: -15, delay: 200 }}>Home</p>
-		<p transition:fly={{ y: -15, delay: 250 }}>About</p>
-		<p transition:fly={{ y: -15, delay: 300 }}>Portfolio</p>
+		<div class="flex flex-col justify-center">
+			<!-- <a href="#homeSection" transition:fly={{ y: -15, delay: 200 }}>Home</a> -->
+			<a
+				href="#aboutSection"
+				on:click|preventDefault={scrollIntoView}
+				transition:fly={{ y: -15, delay: 200 }}>About</a
+			>
+			<a target="_blank" href={portfolioLink} transition:fly={{ y: -15, delay: 250 }}>Portfolio</a>
+			<!-- NOT NEEDED BECAUSE CONTACTS ARE IN ABOUT PAGE -->
+			<!-- <a
+				href="#contactSection"
+				on:click|preventDefault={scrollIntoView}
+				transition:fly={{ y: -15, delay: 300 }}>Contact</a
+			> -->
+		</div>
 		<Divider size={24} />
 		<div class="bar" transition:scale={{ duration: 750, easing: quadOut, opacity: 1 }} />
 	</div>

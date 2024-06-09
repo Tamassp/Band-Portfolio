@@ -49,13 +49,13 @@
 
 <div class="pageContainer">
 	<div
-		class="sticky top-0 left-0 z-10 flex flex-row items-center justify-between w-full pt-6 pb-6 pl-2 pr-2 bg-white navbar"
+		class="sticky top-0 left-0 z-10 flex flex-row items-center justify-between w-full pt-1 pb-1 pl-2 pr-2 bg-white sm:pt-4 sm:pb-4 md:pt-6 md:pb-6 navbar"
 	>
 		<Title class="logo">SwingBy</Title>
 		<Hamburger bind:open />
 	</div>
 	<div class="fixed right-0 z-10 w-full">
-		<Menu bind:open />
+		<Menu bind:open portfolioLink="blank" />
 	</div>
 	<!-- <Menu bind:open /> -->
 
@@ -108,7 +108,7 @@
 			alt="piano2"
 			class="sticky ml-auto border-l-8 border-t-8 border-r-[16px] border-white /*md:w-1/2 md:-mt-48 top-16"
 		/>
-		<div class="flex flex-col items-center bg-white 0 md:mt-12 content">
+		<section id="aboutSection" class="flex flex-col items-center bg-white 0 md:mt-12 content">
 			<Divider size={32} />
 			<!-- <TitleDescription title="About" description=" 'There is one language that speaks to everyone: Music'" descriptionStyles=" text-center" /> -->
 			<!-- <TitleDescription description="As an international duo from Horsens with a passion for music, we enjoy performing in the cozy atmosphere of bars and cafes."/>
@@ -132,7 +132,7 @@
 			<a>Listen to our portfolio</a>
 			<Divider size={48} />
 			<TitleDescription title="Booking" description="hello@gmail.com"></TitleDescription>
-		</div>
+		</section>
 		<Divider />
 	</div>
 </div>
@@ -206,6 +206,10 @@
 		aspect-ratio: 16/9;
 		border-radius: 20px;
 		z-index: -1;
+	}
+
+	#aboutSection {
+		scroll-margin-top: 100px;
 	}
 	/* .coverImage {
         width: min-content;
