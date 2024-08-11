@@ -55,7 +55,7 @@
 		<Hamburger bind:open />
 	</div>
 	<div class="fixed right-0 z-10 w-full">
-		<Menu bind:open portfolioLink="blank" />
+		<Menu bind:open portfolioLink="https://www.youtube.com/@SwingByBand" />
 	</div>
 	<!-- <Menu bind:open /> -->
 
@@ -115,23 +115,26 @@
 			<TitleDescription description="Our repertoire mostly consists of jazz/blues/pop cover songs, but we also love to create mashups and more upbeat tunes."/> -->
 			<Title>About</Title>
 			<Divider />
-			<Description class="text-center"
-				>There is one language that speaks to everyone: Music</Description
-			>
+			<Description class="text-center">Based in the town of Horsens (DK)</Description>
+			<Divider />
+			<Description class="text-center">
+				We are a dynamic trio of international musicians bringing our own blend of mashups, swing,
+				jazz, blues, and pop covers to life.
+			</Description>
 			<Divider />
 			<Description class="text-center"
-				>As an international duo from Horsens with a passion for music, we enjoy performing in the
-				cozy atmosphere of bars and cafes.</Description
-			>
-			<Divider />
-			<Description class="text-center"
-				>Our repertoire mostly consists of jazz/blues/pop cover songs, but we also love to create
-				mashups and more upbeat tunes.</Description
+				>We weave tunes that take listeners to new places and times. Whether you're looking to set
+				the mood at your bar, café, or special event, our diverse repertoire are sure to entertain
+				our audience.</Description
 			>
 			<Divider size={24} />
-			<a>Listen to our portfolio</a>
+			<a href="https://www.youtube.com/@SwingByBand" target="_blank" style="color: chocolate;"
+				>Listen to our portfolio</a
+			>
 			<Divider size={48} />
-			<TitleDescription title="Booking" description="hello@gmail.com"></TitleDescription>
+			<section id="contactSection" class="flex flex-col items-center">
+				<TitleDescription title="Booking" description="band.swingby@gmail.com"></TitleDescription>
+			</section>
 		</section>
 		<Divider />
 	</div>
